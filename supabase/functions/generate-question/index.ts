@@ -39,7 +39,7 @@ Return ONLY the question text, nothing else. Do not include any preamble or expl
     const response = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${Deno.env.get("GEMINI_API_KEY")}`
+        "Authorization": `Bearer ${Deno.env.get("GEMINI_API_KEY")}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
