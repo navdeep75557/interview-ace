@@ -36,14 +36,14 @@ The question should:
 
 Return ONLY the question text, nothing else. Do not include any preamble or explanation.`;
 
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
+        "Authorization": `Bearer $Deno.env.get("AIzaSyCW353S1RFzexKeLaD0K-j9l72u9ahPHOw")}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: ""gemini-2.0-flash"",
         messages: [
           { role: "system", content: "You are an expert technical interviewer for software engineering positions." },
           { role: "user", content: prompt }
