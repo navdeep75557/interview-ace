@@ -39,14 +39,14 @@ Respond in the following JSON format exactly:
 
 Be constructive but honest. Consider the experience level when scoring.`;
 
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
+        "Authorization": `Bearer ${Deno.env.get("AIzaSyCW353S1RFzexKeLaD0K-j9l72u9ahPHOw")}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: ""gemini-2.0-flash"",
         messages: [
           { role: "system", content: "You are an expert technical interviewer who provides detailed, constructive feedback. Always respond with valid JSON." },
           { role: "user", content: prompt }
